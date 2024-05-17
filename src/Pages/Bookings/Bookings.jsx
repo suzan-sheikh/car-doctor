@@ -70,10 +70,6 @@ const Bookings = () => {
 
       }
 
-
-
-
-
     return (
         <div>
             <h3 className="text-5xl">Your Bookings is: {bookings.length}</h3>     

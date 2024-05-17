@@ -6,7 +6,7 @@ import SignUp from "../Pages/SingUp/SignUp";
 import CheckOut from "../Pages/CheckOut/CheckOut";
 import Bookings from "../Pages/Bookings/Bookings";
 import PrivateRoute from "./PrivateRoute";
-import About from "../Pages/About";
+import Pagination from "../Pages/Home/Pagenation/Pagination";
 
 const  router = createBrowserRouter([
     {
@@ -37,7 +37,8 @@ const  router = createBrowserRouter([
             },
             {
                 path: '/about',
-                element: <About/>
+                element: <Pagination/>,
+                loader: () => fetch('http://localhost:5000/productsCount')
             }
         ]
     }
